@@ -13,31 +13,38 @@
 
     <main>
         <section class="promo">
-            <div id="display">
-                <div id="calcInput"></div>
-                <div id="calcOutput"></div>
+            <div class="container">
+                <div id="display">
+                    <div id="calcInput"></div>
+                    <div id="calcOutput"></div>
+                </div>
             </div>
         </section>
 <!--Numbers-->
-        <section>
-            <button id="number-0" class="symbol_number">0</button>
-            <button id="number-1" class="symbol_number">1</button>
-            <button id="number-2" class="symbol_number">2</button>
-            <button id="number-3" class="symbol_number">3</button>
-            <button id="number-4" class="symbol_number">4</button>
-            <button id="number-5" class="symbol_number">5</button>
-            <button id="number-6" class="symbol_number">6</button>
-            <button id="number-7" class="symbol_number">7</button>
-            <button id="number-8" class="symbol_number">8</button>
-            <button id="number-9" class="symbol_number">9</button>
-            <button id="decimal" class="symbol">.</button>
-<!--Operations-->
-            <button id="clear" class="symbol">C</button>
-            <button id></button>
-
+        <section class="symbols">
+            <div class="container">
+                <button id="number-0" class="symbol_number">0</button>
+                <button id="number-1" class="symbol_number">1</button>
+                <button id="number-2" class="symbol_number">2</button>
+                <button id="number-3" class="symbol_number">3</button>
+                <button id="number-4" class="symbol_number">4</button>
+                <button id="number-5" class="symbol_number">5</button>
+                <button id="number-6" class="symbol_number">6</button>
+                <button id="number-7" class="symbol_number">7</button>
+                <button id="number-8" class="symbol_number">8</button>
+                <button id="number-9" class="symbol_number">9</button>
+                <button id="decimal" class="symbol">.</button>
+    <!--Operations-->
+                <button id="clear" class="symbol">C</button>
+                <button id="divide" class="symbol_operator"><i class="fas fa-divide"></i></button>
+                <button id="multiply" class="symbol_operator"><i class="fas fa-times"></i></button>
+                <button id="subtract" class="symbol_operator"><i class="fas fa-minus"></i></button>
+                <button id="add" class="symbol_operator"><i class="fas fa-plus"></i></button>
+                <button id="equals" class="symbol_operator"><i class="fas fa-equals"></i></button>
+            </div>
         </section>
-
     </main>
+    
     <script src="script.js"></script>  
 </body>
 </html>

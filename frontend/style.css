@@ -1,0 +1,113 @@
+body {
+    background-color: rgb(27, 217, 217);
+    font-family: 'Roboto', 'sans-serif';    
+    text-align: center;
+    color:  #fff;
+}
+
+.calc {
+    margin: 50px 0;
+}
+
+main {
+    width: 375px;
+    height: 667px;
+    flex-shrink: 0;
+    display: inline-grid;
+    background-color: #222222;
+    padding: 50px;
+    gap: 10px;
+}
+
+#display {
+    padding: 111px 0 0 0;
+    display: grid;
+    grid-area: display;
+    width: 292px;
+    font-size: 80px;
+    overflow: hidden;
+}
+
+#calcInput,
+#calcOutput {
+    justify-self: end;
+    align-self: end;
+    height: 30px;
+    padding-bottom: 10px;
+    overflow: hidden;
+    text-overflow: clip;
+}
+
+#calcInput {
+    font-size: 70px;
+}
+
+
+#clear {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #C0C0C0;
+    width: 70px;
+    height: 70px;
+    padding: 18px 25px 15px 17px; 
+    margin-bottom: 15px;
+}
+
+.symbol {
+    color: #000;
+    font-family: Roboto;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.number,
+#decimal {
+    background-color: #fff;
+}
+
+#number-0 {
+    grid-area: zero;
+}
+
+#number-1 {
+    grid-area: one;
+    padding: 18px 25px 15px 17px; 
+}
+
+#number-2 {
+    grid-area: two;
+}
+
+#number-3 {
+    grid-area: three;
+}
+
+#number-4 {
+    grid-area: four;
+}
+
+#number-5 {
+    grid-area: five;
+}
+
+#number-6 {
+    grid-area: six;
+}
+
+#number-7 {
+    grid-area: seven;
+}
+
+#number-8 {
+    grid-area: eight;
+}
+
+#number-9 {
+    grid-area: nine;
+}
+
+
+
+
+
