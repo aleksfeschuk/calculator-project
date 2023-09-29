@@ -1,69 +1,125 @@
-body {
+
+*, body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
     background-color: rgb(27, 217, 217);
-    font-family: 'Roboto', 'sans-serif';    
+}
+
+
+
+.container_parent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    color:  #fff;
+    margin: 5rem auto;
+	margin-bottom: 2rem;
+}
+
+.container_child {
+    max-width: 375px;
+    width: 100%;
 }
 
 .calc {
-    margin: 50px 0;
-}
-
-main {
     width: 375px;
-    height: 667px;
-    flex-shrink: 0;
-    display: inline-grid;
-    background-color: #222222;
-    padding: 50px;
-    gap: 10px;
+    height: 570px;
+    background-color: rgb(1, 12, 16);
+    padding: 10px;
+    box-sizing: border-box;
+    box-shadow: 5px 5px 12px rgba(0,0,0,0.5);
+    border-radius: 2rem;
+} 
+
+.calc#display {
+    padding: 1rem;
+    background-color: #212121;
+    border-radius: 1rem;
+} 
+
+.calc_display {
+    width: 100%;
+    border: 0px;
+    background: #3B3B3B;
+    padding: 10px;
+    box-shadow: inset 2px 3px 5px 0px rgba(0,0,0,0.7);
+    outline: none;
+
 }
 
-#display {
-    padding: 111px 0 0 0;
-    display: grid;
-    grid-area: display;
-    width: 292px;
-    font-size: 80px;
-    overflow: hidden;
+.calc_display output {
+    display: block;
+    border: none;
+    outline: none;
+    background: transparent;
+    width: 100%;
+
 }
 
-#calcInput,
-#calcOutput {
-    justify-self: end;
-    align-self: end;
-    height: 30px;
-    padding-bottom: 10px;
-    overflow: hidden;
-    text-overflow: clip;
-}
-
-#calcInput {
-    font-size: 70px;
-}
-
-
-#clear {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #C0C0C0;
-    width: 70px;
-    height: 70px;
-    padding: 18px 25px 15px 17px; 
-    margin-bottom: 15px;
-}
-
-.symbol {
-    color: #000;
-    font-family: Roboto;
+output#user-input {
     font-size: 30px;
     font-weight: 400;
+    text-align: right;
+    color: #bbcf35;
+    
 }
 
-.number,
-#decimal {
-    background-color: #fff;
+output#result {
+    font-size: 50px;
+    font-weight: 600;
+    text-align: right;
+    color: var(--white);
+}
+
+.calc .all_buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+    "display display display display"
+    "clear allclear remainder divide"
+    "seven eight nine multiply"
+    "four five six subtract"
+    "one two three add"
+    "zero decimal equals add";
+    height: 79%;
+    grid-gap: 5px;
+    padding: 1rem;
+    background-color: rgb(1, 12, 16);
+    /* background-color: #212121; */
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    box-shadow: inset 2px 3px 5px 0px rgba(0,0,0,0.7);
+}
+
+
+.calc .all_buttons button {
+    font-size: 30px;
+    padding: 16px 0;
+    font-weight: 700;
+    background: #3B3B3B;
+    border: 0px solid transparent;
+    outline: none;
+    text-decoration: none;
+    color: #DFDFDF;
+    cursor: pointer;
+    border-radius: 1rem;
+    box-shadow: inset 2px 3px 5px 0px rgba(0,0,0,0.7);
+}
+
+
+
+
+
+.fa-solid::before {
+    background-color: #3B3B3B;
+}
+
+
+#add {
+    grid-area: add;
 }
 
 #number-0 {
@@ -72,7 +128,6 @@ main {
 
 #number-1 {
     grid-area: one;
-    padding: 18px 25px 15px 17px; 
 }
 
 #number-2 {
@@ -103,9 +158,46 @@ main {
     grid-area: eight;
 }
 
+
 #number-9 {
     grid-area: nine;
 }
+
+#clear {
+    grid-area: clear;
+}
+
+#allclear {
+    grid-area: allclear;
+}
+
+
+#remainder {
+    grid-area: remainder
+}
+
+
+#divide {
+    grid-area: divide;
+}
+
+#multiply {
+    grid-area: multiply;
+}
+
+#subtract {
+    grid-area: subtract;
+}
+
+#decimal {
+    grid-area: decimal;
+}
+
+#equals {
+    grid-area: equals;
+}
+
+
 
 
 

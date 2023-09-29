@@ -4,46 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1 class="calc">Calculator</h1>
-    </header>
-
-    <main>
-        <section class="promo">
-            <div class="container">
+    
+    <section class="container_parent">
+        <div class="container_child">
+           <div class="calc">
                 <div id="display">
-                    <div id="calcInput"></div>
-                    <div id="calcOutput"></div>
+                    <div class="calc_display">
+                        <output class="user-input" type="text" id="user-input">0</output>	
+                        <output class="result" type="text" id="result">&nbsp;</output>
+                    </div>
                 </div>
-            </div>
-        </section>
-<!--Numbers-->
-        <section class="symbols">
-            <div class="container">
-                <button id="number-0" class="symbol_number">0</button>
-                <button id="number-1" class="symbol_number">1</button>
-                <button id="number-2" class="symbol_number">2</button>
-                <button id="number-3" class="symbol_number">3</button>
-                <button id="number-4" class="symbol_number">4</button>
-                <button id="number-5" class="symbol_number">5</button>
-                <button id="number-6" class="symbol_number">6</button>
-                <button id="number-7" class="symbol_number">7</button>
-                <button id="number-8" class="symbol_number">8</button>
-                <button id="number-9" class="symbol_number">9</button>
-                <button id="decimal" class="symbol">.</button>
-    <!--Operations-->
-                <button id="clear" class="symbol">C</button>
-                <button id="divide" class="symbol_operator"><i class="fas fa-divide"></i></button>
-                <button id="multiply" class="symbol_operator"><i class="fas fa-times"></i></button>
-                <button id="subtract" class="symbol_operator"><i class="fas fa-minus"></i></button>
-                <button id="add" class="symbol_operator"><i class="fas fa-plus"></i></button>
-                <button id="equals" class="symbol_operator"><i class="fas fa-equals"></i></button>
-            </div>
-        </section>
-    </main>
+        <!--Numbers-->
+                <div class="all_buttons">
+                    <button id="number-0" class="symbol_number">0</button>
+                    <button id="number-1" class="symbol_number">1</button>
+                    <button id="number-2" class="symbol_number">2</button>
+                    <button id="number-3" class="symbol_number">3</button>
+                    <button id="number-4" class="symbol_number">4</button>
+                    <button id="number-5" class="symbol_number">5</button>
+                    <button id="number-6" class="symbol_number">6</button>
+                    <button id="number-7" class="symbol_number">7</button>
+                    <button id="number-8" class="symbol_number">8</button>
+                    <button id="number-9" class="symbol_number">9</button>
+                    <button id="decimal" class="symbol">.</button>
+        <!--Operations-->
+                    <button id="allclear" class="symbol" >AC</button>
+                    <button id="clear" class="symbol">C</button>
+                    <button id="remainder" class="symbol_operator">%</button>
+                    <button id="divide" class="symbol_operator"><i class="fa-solid fa-divide"></i></i></button>
+                    <button id="multiply" class="symbol_operator"><i class="fa-solid fa-xmark"></i></button>
+                    <button id="subtract" class="symbol_operator"><i class="fa-solid fa-minus"></i></button>
+                    <button id="add" class="symbol_operator"><i class="fa-solid fa-plus"></i></button>
+                    <button id="equals" class="symbol_operator"><i class="fa-solid fa-equals"></i></button>
+                </div>
+           </div>
+        </div>
+    </section>
     
     <script src="script.js"></script>  
 </body>
