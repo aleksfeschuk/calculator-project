@@ -1,45 +1,53 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const input = document.querySelector("user-input");
-    const buttons = document.querySelectorAll("symbol_number");
-    const operator = document.querySelectorAll("symbol_operator");
-    const decimal = document.querySelector("decimal");
-    const allClear = document.querySelector("allclear");
-    const clear = document.querySelector("clear");
+    
+    const calcAllButtons = document.querySelectorAll(".all_buttons");
+    const input = document.querySelector(".user-input");
+    const calculator = document.querySelector(".calc");
+    const displayResults = document.querySelector(".result")
 
-    let userInput = '';
-    let calcResult = '';
-    let actions = '';
-    let num1 = '';
-    let num2 = '';
-
+    let hasEqualsBeenPressed = false;
+    let result = 0;
+    let shouldCheckForDecimal = false; 
 
     // Calculating
+   
+    function handleButtonClick(event) {
+        const buttonValue = event.target.textContent;
 
-    function divide (a, b) {
-        if (b === 0) {
-            return 'No';
+        switch(buttonValue) {
+            case '=':
+                if (!hasEqualsBeenPressed) {
+                    try {
+                        result = eval(input.textContent);
+                        displayResult.textContent = isNaN(result) ? "Error" : result;
+                    } catch (error) {
+                        displayResult.textContent = "Error";
+                    }
+                }
+                hasEqualsBeenPressed = true;
+                break;
+            case 'C':
+                input.textContent = '';
+                displayResult.textContent = '';
+                result = 0;
+                hasEqualsBeenPressed = false;
+                break;
+            case '/':
+            case '*':
+            case '-':
+            case '+':
+            case '%':
+                input.textContent += buttonValue;
+                hasEqualsBeenPressed = false;
+                break;
+            default: 
+                input.textContent += buttonValue;
+                hasEqualsBeenPressed = false;
+                break;
         }
-        return a / b;
     }
 
-    function multiply (arr) {
-        let answer = 1; 
-        for (let i = 0; i < arr.length; i += 1) {
-            answer *= arr[i];
-        }
-        return answer;
-    }
-
-    function subtract (a, b) {
-        return a - b;
-    }
-
-    function add(a, b) {
-        return a + b;
-    }
-
-    
-
-
-
+    calcAllButtons.forEach(button => {
+        button.addEventListener('click', handleButtonClick);
+    });
 });
